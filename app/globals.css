@@ -1,0 +1,152 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Periwinkle purple (#9e90de) based elegant theme */
+  --background: #f4f2fc;
+  --foreground: #15122a;
+  --card: #ffffff;
+  --card-foreground: #15122a;
+  --popover: #ffffff;
+  --popover-foreground: #15122a;
+  --primary: #9e90de;
+  --primary-foreground: #ffffff;
+  --secondary: #eceaf8;
+  --secondary-foreground: #3a3260;
+  --muted: #ddd9f4;
+  --muted-foreground: #6158a0;
+  --accent: #9e90de;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #cdc9ef;
+  --input: #ddd9f4;
+  --ring: #9e90de;
+  --chart-1: #9e90de;
+  --chart-2: #8878d4;
+  --chart-3: #7262ca;
+  --chart-4: #5c4cc0;
+  --chart-5: #b4aae6;
+  --radius: 0.75rem;
+  --sidebar: #eceaf8;
+  --sidebar-foreground: #15122a;
+  --sidebar-primary: #9e90de;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ddd9f4;
+  --sidebar-accent-foreground: #3a3260;
+  --sidebar-border: #cdc9ef;
+  --sidebar-ring: #9e90de;
+}
+
+.dark {
+  --background: #0e0c1a;
+  --foreground: #ddd9f4;
+  --card: #181628;
+  --card-foreground: #ddd9f4;
+  --popover: #181628;
+  --popover-foreground: #ddd9f4;
+  --primary: #9e90de;
+  --primary-foreground: #0e0c1a;
+  --secondary: #252038;
+  --secondary-foreground: #cdc9ef;
+  --muted: #332e4a;
+  --muted-foreground: #a49bd0;
+  --accent: #9e90de;
+  --accent-foreground: #0e0c1a;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #332e4a;
+  --input: #252038;
+  --ring: #9e90de;
+  --chart-1: #9e90de;
+  --chart-2: #8878d4;
+  --chart-3: #7262ca;
+  --chart-4: #5c4cc0;
+  --chart-5: #b4aae6;
+  --sidebar: #0b0a16;
+  --sidebar-foreground: #ddd9f4;
+  --sidebar-primary: #9e90de;
+  --sidebar-primary-foreground: #0e0c1a;
+  --sidebar-accent: #252038;
+  --sidebar-accent-foreground: #cdc9ef;
+  --sidebar-border: #332e4a;
+  --sidebar-ring: #9e90de;
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Hide All Next.js, Turbopack, and Vercel Development Overlays */
+#nextjs-portal, 
+[data-nextjs-portal],
+[data-nextjs-feedback-button],
+.nextjs-toast,
+.__next-feedback-button,
+#turbopack-portal,
+[data-turbopack-portal],
+next-dev-overlay,
+[data-nextjs-toast-container],
+[data-nextjs-feedback-container],
+next-route-announcer {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
